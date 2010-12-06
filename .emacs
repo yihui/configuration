@@ -4,9 +4,9 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(inferior-R-program-name "R")
  '(ess-ask-for-ess-directory nil)
  '(ess-history-file nil)
+ '(ess-language "R")
  '(ess-roxy-template-alist (list (cons "description" "") (cons "details" "") (cons "param" "") (cons "return" "") (cons "author" "Yihui Xie <\\url{http://yihui.name}>") (cons "examples" "")))
  '(ess-user-full-name "Yihui Xie <\\url{http://yihui.name}>")
  '(inferior-R-args "--no-save")
