@@ -10,6 +10,7 @@
  '(ess-roxy-template-alist (list (cons "description" "") (cons "details" "") (cons "param" "") (cons "return" "") (cons "author" "Yihui Xie <\\url{http://yihui.name}>") (cons "examples" "")))
  '(ess-user-full-name "Yihui Xie <\\url{http://yihui.name}>")
  '(inferior-R-args "--no-save")
+ '(inferior-R-program-name "R")
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
  '(scroll-bar-mode (quote right))
