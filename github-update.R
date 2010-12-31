@@ -37,9 +37,9 @@ if ('clone' %in% commandArgs(TRUE)) {
 
 ## install R packages
 if ('install' %in% commandArgs(TRUE)) {
-    for (i in unlist(pkgs)) {
+    for (i in unlist(pkg)) {
         timestamp()
         message('installing: ', i)
-        system(sprintf('R CMD INSTALL %s', i))
+        system(sprintf('R CMD INSTALL %s --preclean', i))
     }
 }
