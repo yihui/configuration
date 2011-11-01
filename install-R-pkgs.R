@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
 
-pkgs = c('ggplot2', 'animation', 'rgl', 'gWidgetsRGtk2', 'pgfSweave', 'Rd2roxygen')
-install.packages(setdiff(pkgs, .packages(TRUE)))
+update.packages(.libPaths()[1], ask = FALSE)
+install.packages(setdiff(c('ggplot2', 'animation', 'rgl', 'gWidgetsRGtk2', 'Rd2roxygen',
+                           'mapdata', 'aplpack', 'TeachingDemos', 'plotrix', 'vioplot',
+                           'cairoDevice', 'xtable'), .packages(TRUE)))
 
