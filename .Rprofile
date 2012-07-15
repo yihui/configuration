@@ -1,11 +1,25 @@
-options(repos = structure(c("http://streaming.stat.iastate.edu/CRAN",
-							"http://www.stats.ox.ac.uk/pub/RWin", 
-							"http://www.omegahat.org/R"), 
-					.Names = c("CRAN", "CRANextra", "Omegahat")), 
-		help_type="text", 
-		tikzLatex = 'pdflatex',
-		keep.blank.line = FALSE, roxygen.comment = "##' ")
+options(
+  repos = c(CRAN = 'http://streaming.stat.iastate.edu/CRAN',
+            CRANextra = 'http://www.stats.ox.ac.uk/pub/RWin',
+            Omegahat = 'http://www.omegahat.org/R'),
+  help_type='text', width = 80
+)
 
-if (.Platform$OS.type == 'windows' && !interactive()) invisible({
-	Sys.setlocale(, "Chinese (Simplified)_People's Republic of China.936")
-	})
+if (.Platform$OS.type == 'unix') {
+  options(browser = 'google-chrome')
+}
+
+# a brutal fix to the LyX bug for my Windows: http://www.lyx.org/trac/ticket/7741
+if (.Platform$OS.type == 'windows' && !interactive() && !nzchar(Sys.getenv('LyXDir')))
+  invisible({
+    Sys.setlocale(, "Chinese (Simplified)_People's Republic of China.936")
+  })
+
+# package development with devtools
+if (interactive()) {
+  .First <- function() {
+    suppressMessages(require(devtools))
+    l = function(pkg = '.', reset = FALSE) load_all(pkg, reset)
+    options(warn = 1)
+  }
+}
