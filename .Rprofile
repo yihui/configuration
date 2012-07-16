@@ -19,7 +19,7 @@ if (.Platform$OS.type == 'windows' && !interactive() && !nzchar(Sys.getenv('LyXD
 if (interactive()) {
   .First <- function() {
     suppressMessages(require(devtools))
-    l = function(pkg = '.', reset = FALSE) load_all(pkg, reset)
     options(warn = 1)
   }
+  l = function(pkg = '.', reset = FALSE) devtools::load_all(pkg, reset)
 }
