@@ -9,12 +9,3 @@ if (.Platform$OS.type == 'unix') {
   options(browser = 'google-chrome')
 }
 
-# package development with devtools
-if (interactive()) {
-  .First <- function() {
-    suppressMessages(require(devtools))
-    options(warn = 1)
-  }
-  l = function(pkg = '.', reset = FALSE) devtools::load_all(pkg, reset)
-}
-
