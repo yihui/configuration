@@ -3,7 +3,7 @@ options(
             CRANextra = 'http://www.stats.ox.ac.uk/pub/RWin',
             Omegahat = 'http://www.omegahat.org/R',
             RStudio = 'http://rstudio.org/_packages'),
-  help_type='text', width = 80
+  help_type='text', width = 80, github.user = 'yihui'
 )
 
 if (.Platform$OS.type == 'unix') {
