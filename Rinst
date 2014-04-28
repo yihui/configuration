@@ -1,0 +1,5 @@
+#!/bin/sh
+
+PKG=$(basename $1)
+[ -d "$PKG" ] || exit 0
+rm -f $PKG_*.tar.gz && R CMD build --no-manual $PKG && R CMD INSTALL $PKG_*.tar.gz
