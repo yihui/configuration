@@ -5,3 +5,9 @@ ln -s /usr/lib/rstudio/bin/pandoc/pandoc ~/bin
 ln -s /usr/lib/rstudio/bin/pandoc/pandoc-citeproc ~/bin
 
 find `pwd` -maxdepth 1 -type f -executable | xargs -n1 ln -s -t ~/bin
+
+ln -s `pwd`/.bash_aliases ~/
+which cranwin || cat .bashrc >> ~/.bashrc
+
+ln -s `pwd`/.gitconfig ~/
+cp .netrc ~/
