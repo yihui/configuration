@@ -1,2 +1,8 @@
 # sometimes I temporarily install some packages to ~/R-tmp; normall I install to ~/R
 R_LIBS_USER="~/R:~/R-tmp"
+
+# custom knitr options for me
+R_KNITR_OPTIONS="knitr.chunk.tidy=TRUE"
+
+# check cran incoming rarely makes any sense to me
+_R_CHECK_CRAN_INCOMING_=FALSE
