@@ -1,0 +1,7 @@
+#!/bin/sh
+
+ln -s `Rscript -e "cat(system.file('bin/knit', package='knitr'))"` ~/bin
+ln -s /usr/lib/rstudio/bin/pandoc/pandoc ~/bin
+ln -s /usr/lib/rstudio/bin/pandoc/pandoc-citeproc ~/bin
+
+find `pwd` -maxdepth 1 -type f -executable | xargs -n1 ln -s -t ~/bin
