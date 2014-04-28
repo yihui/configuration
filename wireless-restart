@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+while true
+do
+  ping google.com -q -c1 && true || (sudo rfkill block wifi;
+     sleep 1; sudo rfkill unblock wifi; echo rebooted wireless; date; sleep 30)
+  sleep 10
+done
+
