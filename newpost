@@ -4,7 +4,7 @@ if [ -d '_posts' ] ; then
   cd _posts
 fi
 
-post=`date +%Y-%m-%d`-`echo $1 | sed 's/ /-/g' | tr '[A-Z]' '[a-z]'`.md
+post=`date +%Y-%m-%d`-`echo $1 | sed 's/[^a-zA-Z0-9]/-/g' | tr '[A-Z]' '[a-z]'`.md
 
 echo "---
 layout: post
