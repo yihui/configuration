@@ -1,0 +1,14 @@
+[user]
+	email = xie@yihui.name
+	name = Yihui Xie
+[alias]
+	co = checkout
+	br = branch
+	cp = cherry-pick
+[gui]
+	fontui = -family \"Warnock Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Ubuntu Mono\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+[branch "master"]
+	rebase = true
+[branch]
+	autosetuprebase = always
