@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pdf2ps $1 ${1%.*}.ps
+ps2pdf14 -dPDFSETTINGS=/prepress -dEmbedAllFonts=true ${1%.*}.ps $1
+rm ${1%.*}.ps
