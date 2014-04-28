@@ -15,4 +15,4 @@ tags: []
 
 " > $post
 
-xdg-open $post
+geany $post
