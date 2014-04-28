@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "binary
+passive
+cd R-release
+put $1
+cd ../R-devel
+put $1" | ftp win-builder.r-project.org

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "passive
+cd incoming
+put $1" | ftp cran.r-project.org
