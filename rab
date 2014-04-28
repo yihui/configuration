@@ -1,0 +1,20 @@
+#!/usr/bin/env Rscript
+
+p = commandArgs(TRUE)
+check = '--check' %in% p
+if (check) p = setdiff(p, '--check')
+if ('--replace-assign' %in% p) {
+  p = setdiff(p, '--replace-assign')
+  options(replace.assign = TRUE)
+}
+reformat = !('--no-format' %in% p)
+if (!reformat) p = setdiff(p, '--no-format')
+
+if (length(p)) {
+    library(Rd2roxygen)
+    invisible(lapply(p, function(x) {
+        timestamp()
+        message('roxygenizing ', x)
+        rab(x, install = TRUE, check = check, reformat = reformat)
+    }))
+}
