@@ -1,12 +1,14 @@
 options(
-  repos = c(CRAN = 'http://streaming.stat.iastate.edu/CRAN',
-            CRANextra = 'http://www.stats.ox.ac.uk/pub/RWin',
-            Omegahat = 'http://www.omegahat.org/R',
-            RStudio = 'http://rstudio.org/_packages'),
-  help_type='text', width = 80, github.user = 'yihui'
+  repos = c(CRAN = 'http://cran.rstudio.com'),
+  help_type = 'text', width = 80, github.user = 'yihui', shiny.reactlog = TRUE,
+  devtools.name = 'Yihui Xie', devtools.desc.author = 'Yihui Xie <xie@yihui.name>',
+  devtools.desc.license = 'GPL', knitr.chunk.tidy = TRUE
 )
 
 if (.Platform$OS.type == 'unix') {
   options(browser = 'google-chrome')
 }
 
+if (interactive()) {
+  h = function(pkg) help(package = (pkg), help_type = 'html')
+}
