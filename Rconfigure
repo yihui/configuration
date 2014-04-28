@@ -1,9 +1,0 @@
-#!/bin/sh
-
-Rtexmf=`Rscript -e 'cat(R.home("share"))'`/texmf
-echo 'making symbolic links from' $Rtexmf 'to ~/texmf'
-ln -s $Rtexmf/tex/latex ~/texmf/tex/latex/R
-ln -s $Rtexmf/bibtex/bib ~/texmf/bibtex/bib/R
-ln -s $Rtexmf/bibtex/bst ~/texmf/bibtex/bst/R
-wget -O ~/texmf/tex/latex/RJournal.sty http://journal.r-project.org/latex/RJournal.sty
-
