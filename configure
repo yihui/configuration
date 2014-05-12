@@ -12,5 +12,7 @@ done
 ln -s `pwd`/.bash_aliases ~/
 which cranwin || cat .bashrc >> ~/.bashrc
 
+kpsewhich Sweave.sty || tlmgr conf texmf TEXMFHOME "~/texmf:/usr/share/R/share/texmf"
+
 ln -s `pwd`/.gitconfig ~/
 cp .netrc ~/
