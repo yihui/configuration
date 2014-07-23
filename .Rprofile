@@ -4,7 +4,7 @@ options(
   devtools.name = 'Yihui Xie', devtools.desc.author = 'Yihui Xie <xie@yihui.name>',
   devtools.desc.license = 'GPL',
   knitr.chunk.tidy = TRUE,
-  warnPartialMatchAttr = TRUE
+  warnPartialMatchAttr = TRUE, warnPartialMatchDollar = TRUE
 )
 
 if (.Platform$OS.type == 'unix') {
