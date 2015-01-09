@@ -3,7 +3,6 @@ options(
   help_type = 'text', width = 80, github.user = 'yihui', shiny.reactlog = TRUE,
   devtools.name = 'Yihui Xie', devtools.desc.author = 'Yihui Xie <xie@yihui.name>',
   devtools.desc.license = 'GPL',
-  knitr.chunk.tidy = TRUE,
   warnPartialMatchAttr = TRUE, warnPartialMatchDollar = TRUE
 )
 
