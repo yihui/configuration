@@ -1,0 +1,3 @@
+#!/bin/sh
+
+R -q -e "rsconnect::deployApp('$1', account = 'yihui', launch.browser = TRUE)"
