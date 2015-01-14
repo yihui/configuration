@@ -11,5 +11,8 @@ if (.Platform$OS.type == 'unix') {
 }
 
 if (interactive()) {
-  h = function(pkg) help(package = (pkg), help_type = 'html')
+  d = list(
+    h = function(pkg) help(package = (pkg), help_type = 'html'),
+    i = function(...) devtools::install_github(...)
+  )
 }
