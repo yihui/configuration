@@ -4,6 +4,8 @@ ln -s `Rscript -e "cat(system.file('bin/knit', package='knitr'))"` ~/bin
 ln -s `Rscript -e "cat(system.file('bin/servr', package='servr'))"` ~/bin
 ln -s /usr/lib/rstudio/bin/pandoc/pandoc ~/bin
 ln -s /usr/lib/rstudio/bin/pandoc/pandoc-citeproc ~/bin
+ln -s `pwd`/.Renviron ~/
+ln -s `pwd`/.Rprofile ~/
 
 for i in $(find `pwd` -maxdepth 1 -type f -executable);
   do ln -s $i ~/bin;
