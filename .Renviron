@@ -1,5 +1,5 @@
 # sometimes I temporarily install some packages to ~/R-tmp; normall I install to ~/R
-R_LIBS_USER="~/R:~/R-tmp"
+R_LIBS_USER="~/R:~/R-tmp:~/R-bioc"
 
 # custom knitr options for me
 R_KNITR_OPTIONS="knitr.chunk.tidy=TRUE"
