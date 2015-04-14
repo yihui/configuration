@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# search for pdf's that did not embed fonts, and output their filenames
+
+for i in `find . -name "*.pdf"`; do [ -z "$(pdffonts $i | grep '   no')" ] || ([ -z "$2" ] && embedfonts $i || echo $i); done
