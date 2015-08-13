@@ -13,6 +13,16 @@ if (.Platform$OS.type == 'unix') {
 if (interactive()) {
   d = list(
     h = function(pkg) help(package = (pkg), help_type = 'html'),
-    i = function(...) devtools::install_github(...)
+    i = function(...) devtools::install_github(...),
+    r = function() {
+      d1 = grep('^/usr/', .libPaths(), value = TRUE)
+      d2 = setdiff(.libPaths(), d1)
+      p1 = .packages(TRUE, d1)
+      p2 = .packages(TRUE, d2)
+      for (i in intersect(p1, p2)) {
+        message('Removing ', i)
+        remove.packages(i)
+      }
+    }
   )
 }
